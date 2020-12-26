@@ -8,5 +8,5 @@ commands:
     description: Gives the tracker to a hunter.
     usage: /<command>
   settarget:
-    description: Spawns the pig!
+    description: Sets speedrunner!
     usage: /<command>
