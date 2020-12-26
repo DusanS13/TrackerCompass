@@ -1,0 +1,12 @@
+name: Tracker
+version: 1.0
+author: Allt
+main: me.Allt.Tracker.Main
+
+commands:
+  givetracker:
+    description: Gives the tracker to a hunter.
+    usage: /<command>
+  settarget:
+    description: Spawns the pig!
+    usage: /<command>
