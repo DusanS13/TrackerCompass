@@ -1,16 +1,13 @@
 package me.Allt.Tracker;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import net.md_5.bungee.api.ChatColor;
-
 public class Commands implements CommandExecutor
 {
-	  public static Player target;
-	  
 	  @Override
 	  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) 
 	  {
@@ -20,14 +17,16 @@ public class Commands implements CommandExecutor
 		    
 		    if(cmd.getName().equalsIgnoreCase("givetracker"))
 		    {
+			      RunnerInstanceControl.AddHunter(player);
+			      
 			      player.getInventory().addItem(ItemManager.compass);
 			      player.sendMessage(ChatColor.GREEN + "Happy hunting!");
 		    }
 		    
 		    if(cmd.getName().equalsIgnoreCase("settarget"))
 		    {
-			      target = player;
-			      player.sendMessage(ChatColor.GREEN + "RUN!!");
+			      RunnerInstanceControl.AddRunner(player);      
+			      player.sendMessage(ChatColor.GREEN + "Good luck!");
 		    }
 		    
 	            return true;
